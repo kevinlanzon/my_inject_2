@@ -5,6 +5,7 @@ describe Array do
   context 'without arguments' do
     it 'can add' do
       expect([1,2,3,4].inject { |memo, ele | memo + ele}).to eq 10
+      expect([1,2,3,4].my_inject { |memo, ele | memo + ele}).to eq 10
     end
 
     it 'can subtract' do
