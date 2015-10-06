@@ -15,10 +15,12 @@ describe Array do
 
     it 'can multiply' do
       expect([1,2,3,4].inject { |memo, ele | memo * ele}).to eq 24
+      expect([1,2,3,4].my_inject { |memo, ele | memo * ele}).to eq 24
     end
 
     it 'can divide' do
       expect([1,2,3,4].inject { |memo, ele | memo / ele}).to eq 0
+      expect([1,2,3,4].my_inject { |memo, ele | memo / ele}).to eq 0
     end
   end
 
