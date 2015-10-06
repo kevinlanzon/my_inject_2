@@ -1,8 +1,10 @@
 class Array
 
-  def my_inject
-    sum = 0
-    self.each { |i| sum += i }
-    sum
+  def my_inject(num=nil)
+    num ||= self.first
+    self[1..-1].each do |elem|
+      num = yield(num,elem)
+    end
+    num
   end
 end

@@ -10,6 +10,7 @@ describe Array do
 
     it 'can subtract' do
       expect([1,2,3,4].inject { |memo, ele | memo - ele}).to eq (-8)
+      expect([1,2,3,4].my_inject { |memo, ele | memo - ele}).to eq (-8)
     end
 
     it 'can multiply' do
